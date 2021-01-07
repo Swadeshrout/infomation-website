@@ -1,0 +1,176 @@
+<!-- <div class="service-section pt-3" [ngClass]="{'sectionHight': isAMCActive}"> -->
+<div class="service-section pt-3">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 text-center">
+            <button class="btn action" [ngClass]="{'active-btn' : isAMCActive}" (click)="onClickEvent('AMC')">AMC
+                Service</button>
+            <button class="btn ml-2 action" [ngClass]="{'active-btn' : isResidentailActive}"
+                (click)="onClickEvent('RES')">Residential Engineering</button>
+        </div>
+        <div class="col-3"></div>
+    </div>
+
+    <div class="d-flex">
+        <ng-container *ngIf="isAMCActive ; else residential">
+            <div class="amc-section w-100">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-5">
+                        <div class="pt-3">
+                            <h1 class="text-center headingService">Annual Maintenance Contract Services</h1>
+                            <hr class="amcLine">
+                        </div>
+
+                        <div class="paragraph-section p-2" id="style-2">
+                            <p><img class="amc-logo" src="../../assets/images/amc.jpg">Cloud computing is not just a one
+                                time job. Cloud requires optimization and upgradations from time-to-time. Teleglobal
+                                International provides annual maintenance contract services to its customers with cloud
+                                infrastructure at a competitive price for various services</p>
+                            <p>We provide complete IT solutions to help for Computing Servers, Storage & Networking
+                                Devices. We meet stringent and robust SLAs as per the needs of the client’s business.
+                                Cloud Uptime is the most critical requirement and focus point of most of the customers
+                                and we achieved the same for them.</p>
+                            <p>Teleglobal International provides comprehensive AMC services. We focus on including most
+                                of the cloud services and maintenance parameters to maintain a win-win relationship with
+                                our customers.</p>
+                            <p>Our AMC services include sales and support of Network Cabling, Firewall Installation,
+                                Data Security, IT Hardware Maintenance, malware detection & correction and much more.
+                                Our integrated and high-quality IT structures make sure the availability of cloud
+                                infrastructure and enterprise continuity.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-6">
+                        <div class="pt-3">
+                            <h1 class="text-center headingService">Our AMC Service Includes:</h1>
+                            <hr class="amcLine">
+                        </div>
+                        <div class="chart-section">
+                            <ngx-charts-pie-chart [view]="view" [scheme]="colorScheme" [results]="single"
+                                [gradient]="gradient" [legend]="showLegend" [legendPosition]="legendPosition"
+                                [labels]="showLabels" [doughnut]="isDoughnut" [trimLabels]="false">
+                            </ngx-charts-pie-chart>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </ng-container>
+
+        <ng-template #residential>
+            <div class="row mt-2">
+                <div class="col-1"></div>
+
+                <div class="col-10">
+                    <div class="residential-content" id="style-2">
+                        <div class="residential-section w-100">
+                            <div class="p-2">
+                                <p><img class="amc-logo" src="../../assets/images/resedential.jpg">In the construction
+                                    industry one of the core sectors of concern is Residential Engineering. Residential
+                                    Projects requires good amount of engineering skills along with all disciplines such
+                                    as Architectural, Structural, Electrical, Plumbing, Mechanical. Residential Project
+                                    Management needs active participation from all resources. Residential Project
+                                    Development requires quite focused attention of many professionals such as
+                                    Architect, Structural Engineer and many more to run the project smoothly for desired
+                                    outputs. To make the whole Residential Project Development process hassle free and
+                                    along with qualitative outcomes Trisita is the right option. Field experienced and
+                                    creative Architects, Structural Engineering experts, architectural technicians and
+                                    draftsmen form an ideal team to give you the accurate Residential Structural
+                                    Engineering Design.
+
+                                    Having homeownership is one of the major investments and essential decision for most
+                                    of people they take in their lives. Trisita can assist you to get maximum return on
+                                    one of the major investments of your life by using the latest design techniques,
+                                    technologies and products available to meet both your financial resources and your
+                                    expectations. Housing Construction Projects are having vast scope and it is
+                                    difficult to handle the same along with your running business activities. Trisita
+                                    offers Structural Consultancy Services and Structural Outsourcing Services in the
+                                    sphere of Residential Engineering that will facilitate in a way that you can provide
+                                    your complete concentration on your core business objectives.</p>
+                            </div>
+                        </div>
+
+                        <div class="residential-eng-service">
+                            <h1 class="text-center headingService">Our Residential Services</h1>
+                            <hr class="amcLine">
+
+                            <div class="row mt-2">
+                                <div class="col service-item">
+                                    <div class="hovereffect">
+                                        <img class="img-responsive"
+                                            src="../../assets/images/rsz_structural-designing.jpg" alt="">
+                                        <div class="overlay">
+                                            <h2>Structural Designing</h2>
+                                            <p>
+                                                <a class="info" href="#">Read More</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col service-item">
+                                    <div class="hovereffect">
+                                        <img class="img-responsive" src="../../assets/images/rsz_structural-drawing.jpg"
+                                            alt="">
+                                        <div class="overlay">
+                                            <h2>Structureal Drafting</h2>
+                                            <p>
+                                                <a class="info" href="#">Read More</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col service-item">
+                                    <div class="hovereffect">
+                                        <img class="img-responsive" src="../../assets/images/rsz_1unnamed.png" alt="">
+                                        <div class="overlay">
+                                            <h2>Site Supervision</h2>
+                                            <p>
+                                                <a class="info" href="#">Read More</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col service-item">
+                                    <div class="hovereffect">
+                                        <img class="img-responsive"
+                                            src="../../assets/images/rsz_expertise-estimation-cgc.jpg" alt="">
+                                        <div class="overlay">
+                                            <h2>Estimation</h2>
+                                            <p>
+                                                <a class="info" href="#">Read More</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col service-item">
+                                    <div class="hovereffect">
+                                        <img class="img-responsive"
+                                            src="../../assets/images/rsz_types-of-tender-and-tendering-process.png"
+                                            alt="">
+                                        <div class="overlay">
+                                            <h2>Tendering</h2>
+                                            <p>
+                                                <a class="info" href="#">Read More</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-1"></div>
+            </div>
+        </ng-template>
+
+
+    </div>
+</div>

@@ -1,3 +1,40 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<h1>Coming soon</h1>>
 
+<div class="header-section d-flex">
+  <div class="logo-section">
+    <img src="../assets/images/logo.PNG" class="logo hover-pointer" (click)="ScrollIntoView('#first' , 'home')" [alt]="altLogo">
+  </div>
+
+  <div class="navbar-section d-flex">
+    <div class="navbar-item">
+      <span class="nav-link" [ngClass]="{'active-nav-link': isHomeActive}" (click)="ScrollIntoView('#first' , 'home')">Home</span>
+    </div>
+    <div class="navbar-item">
+      <span class="nav-link" [ngClass]="{'active-nav-link': isServiceActive}" (click)="ScrollIntoView('#second' , 'service')">Service</span>
+    </div>
+    <div class="navbar-item d-none">
+      <span class="nav-link" [ngClass]="{'active-nav-link': isPortfolioActive}" (click)="ScrollIntoView('#third' , 'portfolio')">Portfolio</span>
+    </div>
+    <div class="navbar-item">
+      <span class="nav-link" [ngClass]="{'active-nav-link': isAboutActive}" (click)="ScrollIntoView('#fourth' , 'about')">About</span>
+    </div>
+    <div class="navbar-item">
+      <span class="nav-link" [ngClass]="{'active-nav-link': isContactActive}" (click)="ScrollIntoView('#fifth' , 'contact')">Contact</span>
+    </div>
+  </div>
+</div>
+
+<div id="first">
+  <home-component></home-component>
+</div>
+<div id="second">
+  <service-component></service-component>
+</div>
+<div id="third">
+  <portfolio-component></portfolio-component>
+</div>
+<div id="fourth">
+  <about-component></about-component>
+</div>
+<div id="fifth">
+  <contact-component></contact-component>
+</div>
