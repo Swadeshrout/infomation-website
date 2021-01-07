@@ -1,0 +1,9 @@
+<div class="home-section">
+    <div class="sliders">
+		<ng-container *ngFor="let img of img_list; let i = index">
+			<div class="slider" *ngIf="current == i" @fade>
+                <div class="img" [ngStyle]="{'background-image': 'url(' + img + ')'}"></div>
+			</div>
+		</ng-container>
+	</div>
+</div>
